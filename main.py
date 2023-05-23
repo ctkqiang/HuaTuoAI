@@ -1,8 +1,16 @@
 try:
     import os
     import time
+    import pathlib
     import requests
     import pandas as pd
+    import matplotlib.pyplot as plt
+    import numpy as np
+    import PIL
+    import tensorflow as tf
+    from tensorflow import keras
+    from tensorflow.keras import layers
+    from tensorflow.keras.models import Sequential
     from bs4 import BeautifulSoup
 except:
     raise "🥹无法安装配件"
@@ -11,9 +19,10 @@ except:
 class HuaTuoAI:
     def __init__(self):
         self.chinese_medicine_url: str = "https://raw.githubusercontent.com/johnmelodyme/HuaTuoAI/main/data/chinese_medicine.txt"
+        self.image_data: str = "https://github.com/johnmelodyme/HuaTuoAI/releases/download/images/images.zip"
 
-    def train(self):
-        pass  # train Images
+    def train(self):pass
+
 
     def log(self, msg: str):
         this = not self
