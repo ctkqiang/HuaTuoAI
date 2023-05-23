@@ -8,7 +8,11 @@
 (f * g)(n) = \sum_{m = -\infty}^{\infty} f(m) \cdot g(n - m)
 \end{equation}
 ```
-![imageclassificationformual.png]("./assets/images/imageclassificationformual.png")
+
+<img src="https://raw.githubusercontent.com/johnmelodyme/HuaTuoAI/main/assets/imageclassificationformual.png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+
 
 
 ### 配置
