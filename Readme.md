@@ -9,10 +9,11 @@
 \end{equation}
 ```
 
-<img src="https://raw.githubusercontent.com/johnmelodyme/HuaTuoAI/main/assets/imageclassificationformual.png"
-     alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px;" />
+<img src="https://raw.githubusercontent.com/johnmelodyme/HuaTuoAI/main/assets/imageclassificationformual.png" style="float: left; margin-right: 10px;" />
 
+> 在这个公式中，`(f * g)(n)` 表示在位置 `n` 对两个函数 `f` 和 `g` 进行卷积操作的结果。符号 `*` 表示卷积操作，
+求和符号 `\sum` 对 `m` 的范围进行求和计算。该公式在每个 `m` 值处将 `f(m)` 和 `g(n - m)` 相乘，并将它们相加，
+以得到卷积结果 `(f * g)(n)`。
 
 
 ### 配置
