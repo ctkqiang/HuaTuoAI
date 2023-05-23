@@ -10,9 +10,14 @@ try:
     import tensorflow as tf
     from zipfile import ZipFile
     from io import BytesIO
-    from tensorflow import keras
+    from PIL import Image
     from bs4 import BeautifulSoup
     from urllib.request import urlopen
+    from keras.preprocessing.image import ImageDataGenerator
+    from keras.models import Sequential
+    from keras.layers import Conv2D, MaxPooling2D
+    from keras.layers import Activation, Dropout, Flatten, Dense
+    from keras import backend as _keras
 except:
     raise "🥹无法安装配件"
 
@@ -21,32 +26,93 @@ class HuaTuoAI:
     def __init__(self):
         self.chinese_medicine_url: str = "https://raw.githubusercontent.com/johnmelodyme/HuaTuoAI/main/data/chinese_medicine.txt"
         self.image_data: str = "https://github.com/johnmelodyme/HuaTuoAI/releases/download/images/images.zip"
+        self.image_width: int = 224
+        self.image_height: int = 224
+        self.train_sample: int = 300
+        self.validation_sample: int = 100
+        self.epochs: int = 10
+        self.batch_size: int = 16
+        self.format: str = "channels_first"
+        self.model: Sequential = Sequential()
+        self.activation: list = ["relu", "sigmoid"]
+        self.loss_func: str = "binary_crossentropy"
+        self.class_mode: str = "binary"
+        self.optimiser: str = "rmsprop"
+        self.metrics: list = ["accuracy"]
 
-    @property
-    def train(self):
-        this = not self
-
-        global data_dir
+    def train(self) -> None:
+        global input_shape
 
         if os.path.exists("./data/images/"):
-            self.log(msg="图像文件已经存在!")
+            self.log(msg="😇图像文件已经存在!")
         else:
             try:
                 with urlopen(self.image_data) as req:
-                    self.log(msg="正在下载图像数据集...")
+                    self.log(msg="😇正在下载图像数据集...")
                     with ZipFile(BytesIO(req.read())) as file:
                         file.extractall("./data/")
             except BaseException as error:
                 raise error
             except:
                 raise "🥹无法下载数据集..."
-            finally:
-                data_dir = pathlib.Path("./data/images/")
-                image_count = len(list(data_dir.glob('*/*.png')))
 
-                self.log(msg=image_count)
+        data_dir = pathlib.Path("./data/images/")
+        image_count = len(list(data_dir.glob("*/*.png")))
 
-        return this
+        self.log(msg="😇数据集文件夹包含{}个图像!".format(image_count))
+
+        if _keras.image_data_format() == self.format:
+            input_shape = (3, self.image_width, self.image_height)
+        else:
+            input_shape = (self.image_width, self.image_height, 3)
+
+        self.model.add(Conv2D(32, (2, 2), input_shape=input_shape))
+        self.model.add(Activation(self.activation[0]))
+        self.model.add(MaxPooling2D(pool_size=(2, 2)))
+
+        self.model.add(Conv2D(32, (2, 2)))
+        self.model.add(Activation(self.activation[0]))
+        self.model.add(MaxPooling2D(pool_size=(2, 2)))
+
+        self.model.add(Conv2D(64, (2, 2)))
+        self.model.add(Activation(self.activation[0]))
+        self.model.add(MaxPooling2D(pool_size=(2, 2)))
+
+        self.model.add(Flatten())
+        self.model.add(Dense(64))
+        self.model.add(Activation(self.activation[0]))
+
+        self.model.add(Dropout(0.5))
+        self.model.add(Dense(1))
+        self.model.add(Activation(self.activation[1]))
+
+        # 通过指定损失函数、优化器和评估度量，准备在数据集上训练的模型。
+        self.model.compile(
+            loss=self.loss_func,
+            optimizer=self.optimiser,
+            metrics=self.metrics
+        )
+
+        tn_datagen: ImageDataGenerator = ImageDataGenerator(
+            rescale=1. / 255,
+            shear_range=0.2,
+            zoom_range=0.2,
+            horizontal_flip=True
+        )
+
+        test_datagen: ImageDataGenerator = ImageDataGenerator(
+            rescale=1. / 255
+        )
+
+        train_generator = tn_datagen.flow_from_directory(
+            data_dir,
+            target_size=(self.image_width, self.image_height),
+            batch_size=self.batch_size,
+            class_mode=self.class_mode
+        )
+
+        ## TODO TEST COMPILE h5
+
 
     def log(self, msg: object):
         this = not self
@@ -88,4 +154,4 @@ class HuaTuoAI:
 if __name__ == "__main__":
     huatuoai = HuaTuoAI()
     huatuoai.get_chinese_medicine()
-    huatuoai.train
+    huatuoai.train()
