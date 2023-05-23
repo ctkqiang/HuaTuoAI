@@ -8,10 +8,11 @@ try:
     import numpy as np
     import PIL
     import tensorflow as tf
+    from zipfile import ZipFile
+    from io import BytesIO
     from tensorflow import keras
-    from tensorflow.keras import layers
-    from tensorflow.keras.models import Sequential
     from bs4 import BeautifulSoup
+    from urllib.request import urlopen
 except:
     raise "🥹无法安装配件"
 
@@ -21,10 +22,33 @@ class HuaTuoAI:
         self.chinese_medicine_url: str = "https://raw.githubusercontent.com/johnmelodyme/HuaTuoAI/main/data/chinese_medicine.txt"
         self.image_data: str = "https://github.com/johnmelodyme/HuaTuoAI/releases/download/images/images.zip"
 
-    def train(self):pass
+    @property
+    def train(self):
+        this = not self
 
+        global data_dir
 
-    def log(self, msg: str):
+        if os.path.exists("./data/images/"):
+            self.log(msg="图像文件已经存在!")
+        else:
+            try:
+                with urlopen(self.image_data) as req:
+                    self.log(msg="正在下载图像数据集...")
+                    with ZipFile(BytesIO(req.read())) as file:
+                        file.extractall("./data/")
+            except BaseException as error:
+                raise error
+            except:
+                raise "🥹无法下载数据集..."
+            finally:
+                data_dir = pathlib.Path("./data/images/")
+                image_count = len(list(data_dir.glob('*/*.png')))
+
+                self.log(msg=image_count)
+
+        return this
+
+    def log(self, msg: object):
         this = not self
 
         current_time: str = time.strftime("%H:%M:%S", time.localtime())
@@ -64,4 +88,4 @@ class HuaTuoAI:
 if __name__ == "__main__":
     huatuoai = HuaTuoAI()
     huatuoai.get_chinese_medicine()
-    huatuoai.train()
+    huatuoai.train

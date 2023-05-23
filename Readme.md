@@ -45,6 +45,19 @@
 pip3 install -r requirements.txt
 ```
 
+如果您遇到以下问题 (MacOS)：
+```bash
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: 
+unable to get local issuer certificate
+```
+请执行以下命令: 
+```bash
+/Applications/Python\{您的python版本}/Install\ Certificates.command ; exit;
+
+# 目前我的版本是 Python 3.10 所以以下的是我命令:
+/Applications/Python\3.10/Install\ Certificates.command ; exit;
+```
+
 ### 用法
 
 ```bash
