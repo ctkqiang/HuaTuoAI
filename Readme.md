@@ -116,8 +116,8 @@ python3 main.py
 
 ### 以下是使用 chinese_medicine.h5 二进制文件进行程序演示的示例，以及输出结果:
 <div style="display: flex;">
-  <img src="" alt="Image 1" width="400" />
-  <img src="" alt="Image 2" width="400" />
+  <img src="https://github.com/johnmelodyme/HuaTuoAI/blob/main/example/2.jpeg?raw=true" alt="Image 2" width="250" />
+  <img src="https://github.com/johnmelodyme/HuaTuoAI/blob/main/example/1.jpeg?raw=true" alt="Image 1" width="250" />
 </div>
 
 ### 个人捐赠支持
