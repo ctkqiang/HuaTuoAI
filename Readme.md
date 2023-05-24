@@ -41,7 +41,7 @@
 
 ### 揭示准确度
 ```markdown
-18/18 [==============================] - 1s 23ms/step - loss: 0.7025 - accuracy: 0.1667 - val_loss: -9.6575 - val_accuracy: 0.2500
+18/18 [==========] - 1s 23ms/step - loss: 0.7025 - accuracy: 0.1667 - val_loss: -9.6575 - val_accuracy: 0.2500
 ```
 
 ### 配置
@@ -65,12 +65,13 @@ unable to get local issuer certificate
 > 为了训练更多数据，请将文件放置在数据集 [data/images] 文件夹中。
 > 为了进行验证，请将您的输入数据添加到[data/input]文件夹中。
 
-当前数据集如下: 
+### 当前数据集如下: 
 ```markdown
 
 HuaTuoAI/
 :
 :.. data/
+:    :.. chinese_medicine.txt
 :    :.. images/
 :         :.. 金银花/
 :             :.. 1.png
@@ -98,6 +99,8 @@ HuaTuoAI/
 :         :.. 人参片/
 :             :.. 1.png
 ```
+
+若您对中药完全陌生，无需担心，我已经收集了一份中药清单。请点击此处[链接](./data/chinese_medicine.txt)查看。
 
 ### 用法
 

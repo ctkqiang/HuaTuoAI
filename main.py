@@ -132,7 +132,7 @@ class HuaTuoAI:
         )
 
         try:
-            self.model.save_weights('chinese_medicine.h5')
+            self.model.save_weights("chinese_medicine{}".format(self.binary_extension))
         except:
             self.log(msg="🥹无法编译数据...")
         finally:
