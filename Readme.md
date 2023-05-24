@@ -1,6 +1,7 @@
 <div id="banner">
-    <img src="./data/banner.png" />
+    <img src="https://github.com/johnmelodyme/HuaTuoAI/blob/main/data/banner.png?raw=true" />
 </div>
+
 # 华佗AI
 
 ## 《支持中医，永远传承古老文化》 ##
