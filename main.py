@@ -7,6 +7,7 @@ try:
     import matplotlib.pyplot as plt
     import numpy as np
     import PIL
+    import scipy
     import tensorflow as tf
     from zipfile import ZipFile
     from io import BytesIO
@@ -30,7 +31,7 @@ class HuaTuoAI:
         self.image_height: int = 224
         self.train_sample: int = 300
         self.validation_sample: int = 100
-        self.epochs: int = 10
+        self.epochs: int = 5
         self.batch_size: int = 16
         self.format: str = "channels_first"
         self.model: Sequential = Sequential()
@@ -39,6 +40,7 @@ class HuaTuoAI:
         self.class_mode: str = "binary"
         self.optimiser: str = "rmsprop"
         self.metrics: list = ["accuracy"]
+        self.binary_extension: str = ".h5"
 
     def train(self) -> None:
         global input_shape
@@ -57,9 +59,12 @@ class HuaTuoAI:
                 raise "🥹无法下载数据集..."
 
         data_dir = pathlib.Path("./data/images/")
+        input_dir = pathlib.Path("./data/input/")
         image_count = len(list(data_dir.glob("*/*.png")))
+        _image_count = len(list(input_dir.glob("*/*.png")))
 
-        self.log(msg="😇数据集文件夹包含{}个图像!".format(image_count))
+        self.log(msg="😇Data 的数据集文件夹包含{}个图像!".format(image_count))
+        self.log(msg="😇Input 的数据集文件夹包含{}个图像!".format(_image_count))
 
         if _keras.image_data_format() == self.format:
             input_shape = (3, self.image_width, self.image_height)
@@ -100,7 +105,7 @@ class HuaTuoAI:
             horizontal_flip=True
         )
 
-        test_datagen: ImageDataGenerator = ImageDataGenerator(
+        test_datagenerator: ImageDataGenerator = ImageDataGenerator(
             rescale=1. / 255
         )
 
@@ -111,8 +116,27 @@ class HuaTuoAI:
             class_mode=self.class_mode
         )
 
-        ## TODO TEST COMPILE h5
+        input_generator = test_datagenerator.flow_from_directory(
+            input_dir,
+            target_size=(self.image_width, self.image_height),
+            batch_size=self.batch_size,
+            class_mode=self.class_mode
+        )
 
+        self.model.fit_generator(
+            train_generator,
+            steps_per_epoch=self.train_sample // self.batch_size,
+            epochs=self.epochs,
+            validation_data=input_generator,
+            validation_steps=self.validation_sample // self.batch_size
+        )
+
+        try:
+            self.model.save_weights('chinese_medicine.h5')
+        except:
+            self.log(msg="🥹无法编译数据...")
+        finally:
+            self.log(msg="😇人工智能数据训练成功!")
 
     def log(self, msg: object):
         this = not self
@@ -133,20 +157,20 @@ class HuaTuoAI:
         assert status is not None
 
         if status == 400:
-            raise "🥹400 请求语法错误、无效请求消息格式。"
+            self.log(msg="🥹400 请求语法错误、无效请求消息格式。")
 
         if status == 404:
-            raise "🥹404 服务器无法找到所请求的资源。"
+            self.log(msg="🥹404 服务器无法找到所请求的资源。")
 
         if status == 500:
-            raise "🥹500 服务器端错误的响应状态码。"
+            self.log(msg="🥹500 服务器端错误的响应状态码。")
 
         if status == 200:
             if not os.path.exists("./data/chinese_medicine.txt"):
                 open("data/chinese_medicine.txt", "wb").write(response.content)
 
                 if os.path.exists("./data/chinese_medicine.txt"):
-                    print("😇中药数据下载成功!")
+                    self.log(msg="😇中药数据下载成功!")
             else:
                 self.log(msg="😇中药数据已存在!")
 
