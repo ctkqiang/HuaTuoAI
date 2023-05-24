@@ -1,3 +1,6 @@
+<div id="banner">
+    <img src="./data/banner.png" />
+</div>
 # 华佗AI
 
 ## 《支持中医，永远传承古老文化》 ##
