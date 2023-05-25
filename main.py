@@ -31,7 +31,7 @@ class HuaTuoAI:
         self.image_height: int = 224
         self.train_sample: int = 300
         self.validation_sample: int = 100
-        self.epochs: int = 5
+        self.epochs: int = 7
         self.batch_size: int = 16
         self.format: str = "channels_first"
         self.model: Sequential = Sequential()
@@ -125,7 +125,7 @@ class HuaTuoAI:
 
         self.model.fit_generator(
             train_generator,
-            steps_per_epoch=self.train_sample // self.batch_size,
+            steps_per_epoch=self.train_sample / self.batch_size,
             epochs=self.epochs,
             validation_data=input_generator,
             validation_steps=self.validation_sample // self.batch_size
@@ -133,6 +133,8 @@ class HuaTuoAI:
 
         try:
             self.model.save_weights("chinese_medicine{}".format(self.binary_extension))
+            self.log(msg="😇训练模型保存为《chinese_medicine.h5》")
+            self.convert_to_tflite()
         except:
             self.log(msg="🥹无法编译数据...")
         finally:
@@ -173,6 +175,15 @@ class HuaTuoAI:
                     self.log(msg="😇中药数据下载成功!")
             else:
                 self.log(msg="😇中药数据已存在!")
+
+    def convert_to_tflite(self):
+        converter = tf.lite.TFLiteConverter.from_saved_model("chinese_medicine{}".format(self.binary_extension))
+        tflite_model = converter.convert()
+
+        with open("chinese_medicine{}".format("tflite"), "wb") as f:
+            f.write(tflite_model)
+
+        self.log(msg="😇训练模型保存为《chinese_medicine.tflite》")
 
 
 if __name__ == "__main__":
