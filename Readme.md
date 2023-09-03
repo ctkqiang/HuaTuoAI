@@ -115,7 +115,11 @@ HuaTuoAI/
 ### 用法
 
 ```bash
-python3 main.py
+python3 tensorflow/run.py
+```
+或
+```bash
+python3 pytorch/run.py
 ```
 
 ### 以下是使用 chinese_medicine.h5 二进制文件进行程序演示的示例，以及输出结果:

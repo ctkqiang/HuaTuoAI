@@ -19,12 +19,15 @@ try:
     from keras.layers import Conv2D, MaxPooling2D
     from keras.layers import Activation, Dropout, Flatten, Dense
     from keras import backend as _keras
-except:
+except ImportError:
     raise "🥹无法安装配件"
-
+finally:
+    pass
 
 class HuaTuoAI:
     def __init__(self):
+        assert tf.__version__.startswith("2")
+
         self.chinese_medicine_url: str = "https://raw.githubusercontent.com/johnmelodyme/HuaTuoAI/main/data/chinese_medicine.txt"
         self.image_data: str = "https://github.com/johnmelodyme/HuaTuoAI/releases/download/images/images.zip"
         self.image_width: int = 224
@@ -132,6 +135,8 @@ class HuaTuoAI:
         )
 
         try:
+       
+
             self.model.save_weights("chinese_medicine{}".format(self.binary_extension))
             self.log(msg="😇训练模型保存为《chinese_medicine.h5》")
             self.convert_to_tflite()
