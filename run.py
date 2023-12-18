@@ -94,7 +94,6 @@ class 华佗AI:
         
                 训练模型.fit(训练目录, validation_data=训练目录, epochs=self.纪元)
                 
-                # print(训练模型)
             else:
                 self.记录(信息=f"{self.图片文件} 不存在")
         except Exception as e:
