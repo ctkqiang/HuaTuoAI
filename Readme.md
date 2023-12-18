@@ -136,7 +136,7 @@ python3 pytorch/run.py
 以下是我的支付宝二维码，您可以扫描二维码进行个人捐赠：
 
 <br />
-<img src="https://raw.githubusercontent.com/johnmelodyme/current_location/johnmelodyme-alipayqr/IMG_4026.JPG"  style="height: 500px !important;width: 350px !important;" >
+<img src="https://github.com/ctkqiang/HuaTuoAI/blob/main/assets/IMG_7417.JPG?raw=true"  style="height: 500px !important;width: 350px !important;" >
 
 **🥰😘🥰😘再次衷心感谢您的支持和慷慨！**
 
