@@ -122,6 +122,9 @@ python3 tensorflow/run.py
 python3 pytorch/run.py
 ```
 
+** 测试 **
+```python3 -m unittest tests/test.py```
+
 ### 以下是使用 chinese_medicine.h5 二进制文件进行程序演示的示例，以及输出结果:
 <div style="display: flex;">
   <img src="https://github.com/johnmelodyme/HuaTuoAI/blob/main/example/2.jpeg?raw=true" alt="Image 2" width="500" />
