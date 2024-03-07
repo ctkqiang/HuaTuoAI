@@ -141,5 +141,7 @@ python3 pytorch/run.py
 <br />
 <img src="https://github.com/ctkqiang/HuaTuoAI/blob/main/assets/IMG_7417.JPG?raw=true"  style="height: 500px !important;width: 350px !important;" >
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F5VCZJU)
+
 **🥰😘🥰😘再次衷心感谢您的支持和慷慨！**
 
