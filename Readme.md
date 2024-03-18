@@ -121,11 +121,7 @@ HuaTuoAI/
 ### 用法
 
 ```bash
-python3 tensorflow/run.py
-```
-或
-```bash
-python3 pytorch/run.py
+python3 run.py
 ```
 
 ** 测试 **
