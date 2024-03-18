@@ -51,7 +51,18 @@
 
 ### 揭示准确度
 ```markdown
-18/18 [==========] - 1s 23ms/step - loss: 0.7025 - accuracy: 0.1667 - val_loss: -9.6575 - val_accuracy: 0.2500
+Epoch 1/5
+1/1 [==============] - 1s 756ms/step - loss: 4.8716 - accuracy: 0.0000e+00 - val_loss: 4.8392 - val_accuracy: 0.0000e+00
+Epoch 2/5
+1/1 [==============] - 0s 208ms/step - loss: 4.8392 - accuracy: 0.0000e+00 - val_loss: 4.8164 - val_accuracy: 0.2000
+Epoch 3/5
+1/1 [==============] - 0s 200ms/step - loss: 4.8164 - accuracy: 0.2000 - val_loss: 4.7990 - val_accuracy: 0.2000
+Epoch 4/5
+1/1 [==============] - 0s 202ms/step - loss: 4.7990 - accuracy: 0.2000 - val_loss: 4.7838 - val_accuracy: 0.2000
+Epoch 5/5
+1/1 [==============] - 0s 203ms/step - loss: 4.7838 - accuracy: 0.2000 - val_loss: 4.7683 - val_accuracy: 0.2000
+
+18/18 [============] - 1s 23ms/step - loss: 0.7025 - accuracy: 0.1667 - val_loss: -9.6575 - val_accuracy: 0.2500
 ```
 
 ### 配置
