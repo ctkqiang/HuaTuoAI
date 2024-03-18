@@ -7,6 +7,7 @@ try:
     import matplotlib.pyplot as 图表
     from typing import Tuple
     from datetime import datetime
+    from colors import pink_back, purple_back, green_back
 except ImportError:
     raise ImportError("🥹无法安装配件")
 finally:
@@ -23,12 +24,12 @@ class 华佗AI:
         self.展示: bool = 展示
         self.图片文件 = "./data/images/"
         self.seed: int = 21
-        self.图像高度: int = 32
-        self.图像宽度: int = 32
-        self.批量的大小: int = 20
+        self.图像高度: int = 60
+        self.图像宽度: int = 60
+        self.批量的大小: int = 50
         self.轴: str | None = "off"
         self.活化: str | None = "relu"
-        self.中药材料: list | any = ["丁公藤", "金银花", "罗汉果", "人参片"]
+        self.中药材料: list | any = ["丁公藤", "金银花", "罗汉果", "人参片", "绿豆"]
         self.优化器: str | None = "adam"
         self.纪元: int = 5
 
@@ -69,7 +70,9 @@ class 华佗AI:
                     for 药 in range(9):
                         图表.subplot(3, 3, (药 + 1))
                         图表.imshow(照片[药].numpy().astype("uint8"))
-                        图表.title(label=self.中药材料[名称[药]], fontsize=10, color="green")
+                        图表.title(
+                            label=self.中药材料[名称[药]], fontsize=15, color="green"
+                        )
                         图表.axis(self.轴)
 
                 if self.展示:
@@ -108,7 +111,7 @@ class 华佗AI:
         现在: object = datetime.now()
         目前时间: object = 现在.strftime("%H:%M:%S")
 
-        print(f"华佗AI[{目前时间}] {str(信息)}")
+        print(green_back + f"华佗AI[{目前时间}] {str(信息)}")
 
 
 if __name__ == "__main__":
