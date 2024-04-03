@@ -152,7 +152,12 @@ python3 run.py
 以下是我的支付宝二维码，您可以扫描二维码进行个人捐赠：
 
 <br />
-<img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9248.JPG?raw=true"  style="height: 500px !important;width: 350px !important;" >
+<div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+  <img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9863.jpg?raw=true" style="height: 500px !important; width: 350px !important;">
+  <br >
+  <img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9859.JPG?raw=true" style="height: 500px !important; width: 350px !important;">
+</div>
+
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F5VCZJU)
 
