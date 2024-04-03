@@ -154,7 +154,7 @@ python3 run.py
 <br />
 <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
   <img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9863.jpg?raw=true" style="height: 500px !important; width: 350px !important;">
-  <br >
+ 
   <img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9859.JPG?raw=true" style="height: 500px !important; width: 350px !important;">
 </div>
 
