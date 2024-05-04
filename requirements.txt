@@ -12,3 +12,4 @@ six==1.16.0
 soupsieve==2.4.1
 tzdata==2023.3
 urllib3==2.0.2
+pyclean==3.0.0
