@@ -137,7 +137,7 @@ HuaTuoAI/
 python3 run.py
 ```
 
-** 测试 **
+### 测试 
 ```python3 -m unittest tests/test.py```
 
 ### 以下是使用 chinese_medicine.h5 二进制文件进行程序演示的示例，以及输出结果:
