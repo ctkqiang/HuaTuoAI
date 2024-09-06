@@ -9,7 +9,7 @@ except ImportError:
 
 class HuaTuoAITorch:
     def __init__(self):
-        pass
+        super(HuaTuoAITorch, self).__init__()
 
     def train(self) -> None:
         pass
@@ -23,6 +23,7 @@ class HuaTuoAITorch:
 
 class HuaTuoAIDataset(torch.utils.data.Dataset):
     def __init__(self, root, transforms=None):
+        super(HuaTuoAIDataset, self).__init__()
         self.root = root
         self.transforms = transforms
         self.imgs = list(sorted("../data/images"))
@@ -45,6 +46,31 @@ class HuaTuoAIDataset(torch.utils.data.Dataset):
             img, target = self.transforms(img, target)
 
         return img, target
+
+    def __len__(self):
+        return len(self.imgs)
+
+    def parse_voc_xml(self, xml_file):
+        import xml.etree.ElementTree as ET
+
+        tree = ET.parse(xml_file)
+        root = tree.getroot()
+        boxes = []
+        labels = []
+        class_to_label = {"cat": 1, "dog": 2}
+        for obj in root.findall("object"):
+            label = obj.find("name").text
+            labels.append(class_to_label[label])
+            bbox = obj.find("bndbox")
+            boxes.append(
+                [
+                    float(bbox.find("xmin").text),
+                    float(bbox.find("ymin").text),
+                    float(bbox.find("xmax").text),
+                    float(bbox.find("ymax").text),
+                ]
+            )
+        return boxes, labels
 
 
 if __name__ == "__main__":

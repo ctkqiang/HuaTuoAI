@@ -155,12 +155,10 @@ python3 -m unittest tests/test.py
 以下是我的支付宝二维码，您可以扫描二维码进行个人捐赠：
 
 <br />
-<div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
-  <img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9863.jpg?raw=true" style="height: 500px !important; width: 350px !important;">
- 
-  <img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9859.JPG?raw=true" style="height: 500px !important; width: 350px !important;">
-</div>
 
+| 微信支付 | 支付宝支付 |
+| --- | --- |
+| <img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9863.jpg?raw=true" height="500" /> | <img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9859.JPG?raw=true" height="500" /> |
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F5VCZJU)
 
