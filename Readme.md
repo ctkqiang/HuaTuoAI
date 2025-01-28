@@ -166,55 +166,60 @@ python3 -m unittest tests/test.py
 </div>
 
 
+
+### 个人捐赠支持
+如果您认为该项目对您有所帮助，并且愿意个人捐赠以支持其持续发展和维护，🥰我非常感激您的慷慨。
+您的捐赠将帮助我继续改进和添加新功能到该项目中。 通过财务捐赠，您将有助于确保该项目保持免
+费和对所有人开放。即使是一小笔捐款也能产生巨大的影响，也是对我个人的鼓励。
+## 支持项目 💝
+
+感谢您对华佗 AI 项目的关注！您的支持将帮助我们持续改进项目，为中医药发展贡献力量。
+
+### 国内支付方式
+
 <div align="center">
-    <h2>🌟 支持项目</h2>
-    <p>
-        如果您认为这个项目对您有帮助，欢迎支持项目的持续发展！
-        您的每一份贡献都将帮助我们不断改进项目，
-        确保它始终保持免费开放，服务更多需要的人。
-    </p>
-    
-    <h3>扫码支持</h3>
-    <table>
-        <tr>
-            <td align="center">
-                <img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9863.jpg?raw=true" width="200" />
-                <br />
-                <strong>微信支付</strong>
-            </td>
-            <td align="center">
-                <img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9859.JPG?raw=true" width="200" />
-                <br />
-                <strong>支付宝</strong>
-            </td>
-        </tr>
-    </table>
-
-    <h3>国际支付渠道</h3>
-    <p>
-        <a href="https://ko-fi.com/F1F5VCZJU">
-            <img src="https://img.shields.io/badge/Ko--fi-支持项目-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" />
-        </a>
-        <a href="https://www.paypal.com/paypalme/ctkqiang">
-            <img src="https://img.shields.io/badge/PayPal-立即支持-00457C?style=for-the-badge&logo=paypal&logoColor=white" />
-        </a>
-        <a href="https://donate.stripe.com/00gg2nefu6TK1LqeUY">
-            <img src="https://img.shields.io/badge/Stripe-安全支付-626CD9?style=for-the-badge&logo=Stripe&logoColor=white" />
-        </a>
-    </p>
-
-    <h3>关注作者</h3>
-    <p>
-        <a href="https://github.com/ctkqiang"><img src="https://img.shields.io/badge/GitHub-开源项目-24292e?style=for-the-badge&logo=github" /></a>
-        <a href="https://www.linkedin.com/in/ctkqiang/"><img src="https://img.shields.io/badge/LinkedIn-职业经历-0077b5?style=for-the-badge&logo=linkedin" /></a>
-        <a href="https://stackoverflow.com/users/10758321/%e9%92%9f%e6%99%ba%e5%bc%ba"><img src="https://img.shields.io/badge/Stack_Overflow-技术问答-f48024?style=for-the-badge&logo=stackoverflow" /></a>
-    </p>
-    <p>
-        <a href="https://www.facebook.com/JohnMelodyme/"><img src="https://img.shields.io/badge/Facebook-社交媒体-1877F2?style=for-the-badge&logo=facebook" /></a>
-        <a href="https://www.instagram.com/ctkqiang"><img src="https://img.shields.io/badge/Instagram-照片分享-E4405F?style=for-the-badge&logo=instagram" /></a>
-        <a href="https://linktr.ee/ctkqiang.official"><img src="https://img.shields.io/badge/Linktree-更多链接-39E09B?style=for-the-badge&logo=linktree" /></a>
-    </p>
+<table>
+<tr>
+<td align="center" width="300">
+<img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9863.jpg?raw=true" width="200" />
+<br />
+<strong>微信支付</strong>
+</td>
+<td align="center" width="300">
+<img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9859.JPG?raw=true" width="200" />
+<br />
+<strong>支付宝</strong>
+</td>
+</tr>
+</table>
 </div>
 
+### 国际支付渠道
 
- 
+<div align="center">
+
+[![支付宝](https://img.shields.io/badge/支付宝-捐赠-00A1E9?style=for-the-badge&logo=alipay&logoColor=white)](https://qr.alipay.com/fkx19369scgxdrkv8mxso92)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-赞助-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/F1F5VCZJU)
+[![PayPal](https://img.shields.io/badge/PayPal-支持-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.com/paypalme/ctkqiang)
+[![Stripe](https://img.shields.io/badge/Stripe-捐赠-626CD9?style=for-the-badge&logo=Stripe&logoColor=white)](https://donate.stripe.com/00gg2nefu6TK1LqeUY)
+
+</div>
+
+### 关注作者
+
+<div align="center">
+
+#### 专业平台
+
+[![GitHub](https://img.shields.io/badge/GitHub-开源项目-24292e?style=for-the-badge&logo=github)](https://github.com/ctkqiang)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-职业经历-0077b5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/ctkqiang/)
+[![Stack Overflow](https://img.shields.io/badge/Stack_Overflow-技术交流-f48024?style=for-the-badge&logo=stackoverflow)](https://stackoverflow.com/users/10758321/%e9%92%9f%e6%99%ba%e5%bc%ba)
+
+#### 社交媒体
+
+[![Facebook](https://img.shields.io/badge/Facebook-社交平台-1877F2?style=for-the-badge&logo=facebook)](https://www.facebook.com/JohnMelodyme/)
+[![Instagram](https://img.shields.io/badge/Instagram-生活分享-E4405F?style=for-the-badge&logo=instagram)](https://www.instagram.com/ctkqiang)
+[![Twitch](https://img.shields.io/badge/Twitch-直播频道-9146FF?style=for-the-badge&logo=twitch)](https://twitch.tv/ctkqiang)
+[![WeChat](https://img.shields.io/badge/WeChat-联系我-07C160?style=for-the-badge&logo=wechat)](https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9245.JPG?raw=true)
+
+</div>
