@@ -1,12 +1,21 @@
-<div id="banner">
-    <img src="https://github.com/johnmelodyme/HuaTuoAI/blob/main/data/banner.png?raw=true" />
-</div>
-
+<div align="center">
+    <img src="https://github.com/johnmelodyme/HuaTuoAI/blob/main/data/banner.png?raw=true" alt="HuaTuo AI Banner" width="100%" />
+    
 # 华佗AI
 
-## 《支持中医，永远传承古老文化》 ##
+### 《支持中医，永远传承古老文化》
 
->这个仓库里藏着一个神秘的宝藏——一个专为中药打造的人工智能图像分类系统。就像一位奇幻冒险中的导航者，这个项目的任务是将神秘的图像输入，变幻成准确的中草药和成分分类。让我们一起揭开这个数字世界中的迷雾，解锁植物的秘密，用技术和智能描绘中药的未知领域。
+<p align="center">
+    <em>这个仓库里藏着一个神秘的宝藏——一个专为中药打造的人工智能图像分类系统。就像一位奇幻冒险中的导航者，这个项目的任务是将神秘的图像输入，变幻成准确的中草药和成分分类。让我们一起揭开这个数字世界中的迷雾，解锁植物的秘密，用技术和智能描绘中药的未知领域。</em>
+</p>
+
+<p align="center">
+    <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python" alt="Python 3.10" />
+    <img src="https://img.shields.io/badge/TensorFlow-Latest-orange?style=for-the-badge&logo=tensorflow" alt="TensorFlow" />
+    <img src="https://img.shields.io/badge/License-Custom-green?style=for-the-badge" alt="License" />
+</p>
+</div>
+
 
 ### 个人授权许可证
 ```markdown
@@ -44,11 +53,15 @@
 - **部署**：存储库中提供了部署指南和资源，以便在生产环境中部署图像分类模型。这使得训练好的模型可以用于实时推理，并集成到现有的系统或应用程序中。
 
 
-| 损失函数         | 二元交叉熵                     |
-|-------------------|--------------------------------|
-| 类别模式         | Binary                           |
-| 优化器           | RMSProp                        |
-| 深度学习模型     | 卷积神经网络                   |
+### 模型架构
+
+| 参数         | 值           |
+| ------------ | ------------ |
+| 损失函数     | 二元交叉熵   |
+| 类别模式     | Binary       |
+| 优化器       | RMSProp      |
+| 深度学习模型 | 卷积神经网络 |
+
 
 
 ### 揭示准确度
@@ -67,10 +80,12 @@ Epoch 5/5
 18/18 [============] - 1s 23ms/step - loss: 0.7025 - accuracy: 0.1667 - val_loss: -9.6575 - val_accuracy: 0.2500
 ```
 
-### 配置
+1️⃣ 安装依赖
+
 ```bash
 pip3 install -r requirements.txt
 ```
+
 
 如果您遇到以下问题 (MacOS)：
 ```bash
@@ -131,44 +146,75 @@ HuaTuoAI/
 
 > 若您对中药完全陌生，无需担心，我已经收集了一份中药清单。请点击此处[链接](./data/chinese_medicine.txt)查看。
 
-### 用法
+2️⃣ 运行程序
 
 ```bash
 python3 run.py
 ```
 
-### 测试 
+3️⃣ 运行测试
 ```bash
 python3 -m unittest tests/test.py
 ```
 
+---
+
+## 演示效果
 ### 以下是使用 chinese_medicine.h5 二进制文件进行程序演示的示例，以及输出结果:
 <div style="display: flex;">
   <img src="https://github.com/johnmelodyme/HuaTuoAI/blob/main/example/2.jpeg?raw=true" alt="Image 2" width="350" /><img src="https://github.com/johnmelodyme/HuaTuoAI/blob/main/example/1.jpeg?raw=true" alt="Image 1" width="350" />
 </div>
 
-### 个人捐赠支持
-如果您认为该项目对您有所帮助，并且愿意个人捐赠以支持其持续发展和维护，🥰我非常感激您的慷慨。
-您的捐赠将帮助我继续改进和添加新功能到该项目中。 通过财务捐赠，您将有助于确保该项目保持免
-费和对所有人开放。即使是一小笔捐款也能产生巨大的影响，也是对我个人的鼓励。
 
-以下是我的支付宝二维码，您可以扫描二维码进行个人捐赠：
+<div align="center">
+    <h2>🌟 支持项目</h2>
+    <p>
+        如果您认为这个项目对您有帮助，欢迎支持项目的持续发展！
+        您的每一份贡献都将帮助我们不断改进项目，
+        确保它始终保持免费开放，服务更多需要的人。
+    </p>
+    
+    <h3>扫码支持</h3>
+    <table>
+        <tr>
+            <td align="center">
+                <img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9863.jpg?raw=true" width="200" />
+                <br />
+                <strong>微信支付</strong>
+            </td>
+            <td align="center">
+                <img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9859.JPG?raw=true" width="200" />
+                <br />
+                <strong>支付宝</strong>
+            </td>
+        </tr>
+    </table>
 
-<br />
+    <h3>国际支付渠道</h3>
+    <p>
+        <a href="https://ko-fi.com/F1F5VCZJU">
+            <img src="https://img.shields.io/badge/Ko--fi-支持项目-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" />
+        </a>
+        <a href="https://www.paypal.com/paypalme/ctkqiang">
+            <img src="https://img.shields.io/badge/PayPal-立即支持-00457C?style=for-the-badge&logo=paypal&logoColor=white" />
+        </a>
+        <a href="https://donate.stripe.com/00gg2nefu6TK1LqeUY">
+            <img src="https://img.shields.io/badge/Stripe-安全支付-626CD9?style=for-the-badge&logo=Stripe&logoColor=white" />
+        </a>
+    </p>
 
-| 微信支付 | 支付宝支付 |
-| --- | --- |
-| <img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9863.jpg?raw=true" height="500" /> | <img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9859.JPG?raw=true" height="500" /> |
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F5VCZJU)
-
-
-
-## 爱心捐款
-<a href="https://qr.alipay.com/fkx19369scgxdrkv8mxso92"><img src="https://img.shields.io/badge/alipay-00A1E9?style=for-the-badge&logo=alipay&logoColor=white"></a> <a href="https://ko-fi.com/F1F5VCZJU"><img src="https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white"></a> <a href="https://www.paypal.com/paypalme/ctkqiang"><img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white"></a> <a href="https://donate.stripe.com/00gg2nefu6TK1LqeUY"><img src="https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white"></a>
-
-## 关注我
-<a href="https://twitch.tv/ctkqiang"><img src="https://img.shields.io/badge/Twitch-9146FF?style=for-the-badge&logo=twitch&logoColor=white"></a> <a href="https://open.spotify.com/user/22sblyn4dsymya3xinw3umhai"><img src="https://img.shields.io/badge/Spotify-1ED760?&style=for-the-badge&logo=spotify&logoColor=white"></a> <a href="https://www.tiktok.com/@ctkqiang"><img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white"></a> <a href="https://stackoverflow.com/users/10758321/%e9%92%9f%e6%99%ba%e5%bc%ba"><img src="https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white"></a> <a href="https://www.facebook.com/JohnMelodyme/"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white"></a> <a href="https://github.com/ctkqiang"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> <a href="https://www.instagram.com/ctkqiang"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a> <a href="https://www.linkedin.com/in/ctkqiang/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> <a href="https://linktr.ee/ctkqiang.official"><img src="https://img.shields.io/badge/linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white"></a> <a href="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9245.JPG?raw=true"><img src="https://img.shields.io/badge/WeChat-07C160?style=for-the-badge&logo=wechat&logoColor=white"></a>
+    <h3>关注作者</h3>
+    <p>
+        <a href="https://github.com/ctkqiang"><img src="https://img.shields.io/badge/GitHub-开源项目-24292e?style=for-the-badge&logo=github" /></a>
+        <a href="https://www.linkedin.com/in/ctkqiang/"><img src="https://img.shields.io/badge/LinkedIn-职业经历-0077b5?style=for-the-badge&logo=linkedin" /></a>
+        <a href="https://stackoverflow.com/users/10758321/%e9%92%9f%e6%99%ba%e5%bc%ba"><img src="https://img.shields.io/badge/Stack_Overflow-技术问答-f48024?style=for-the-badge&logo=stackoverflow" /></a>
+    </p>
+    <p>
+        <a href="https://www.facebook.com/JohnMelodyme/"><img src="https://img.shields.io/badge/Facebook-社交媒体-1877F2?style=for-the-badge&logo=facebook" /></a>
+        <a href="https://www.instagram.com/ctkqiang"><img src="https://img.shields.io/badge/Instagram-照片分享-E4405F?style=for-the-badge&logo=instagram" /></a>
+        <a href="https://linktr.ee/ctkqiang.official"><img src="https://img.shields.io/badge/Linktree-更多链接-39E09B?style=for-the-badge&logo=linktree" /></a>
+    </p>
+</div>
 
 
  
