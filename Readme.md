@@ -165,6 +165,7 @@ python3 -m unittest tests/test.py
   <img src="https://github.com/johnmelodyme/HuaTuoAI/blob/main/example/2.jpeg?raw=true" alt="Image 2" width="350" /><img src="https://github.com/johnmelodyme/HuaTuoAI/blob/main/example/1.jpeg?raw=true" alt="Image 1" width="350" />
 </div>
 
+
 ## 🌟 开源项目赞助计划
 
 ### 用捐赠助力发展
@@ -181,16 +182,26 @@ python3 -m unittest tests/test.py
 
 ### 🌐 全球捐赠通道
 
-#### 中国大陆用户
+#### 国内用户
 
 <div align="center" style="margin: 40px 0">
 
-🟢 微信支付  
-![微信捐赠码](https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9859.JPG?raw=true=200x200)
-
-🔵 支付宝  
-![支付宝捐赠码](https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9863.jpg?raw=true=200x200)
-
+<div align="center">
+<table>
+<tr>
+<td align="center" width="300">
+<img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9863.jpg?raw=true" width="200" />
+<br />
+<strong>🔵 支付宝</strong>
+</td>
+<td align="center" width="300">
+<img src="https://github.com/ctkqiang/ctkqiang/blob/main/assets/IMG_9859.JPG?raw=true" width="200" />
+<br />
+<strong>🟢 微信支付</strong>
+</td>
+</tr>
+</table>
+</div>
 </div>
 
 #### 国际用户
