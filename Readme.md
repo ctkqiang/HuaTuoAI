@@ -157,6 +157,7 @@ python3 run.py
 python3 -m unittest tests/test.py
 ```
 
+
 ---
 
 ## 演示效果
@@ -261,6 +262,9 @@ python3 -m unittest tests/test.py
 </div>
 
 ---
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=ctkqiang/huatuoai&type=Date)](https://star-history.com/?utm_source=bestxtools.com#ctkqiang/huatuoai&Date)
 
 🙌 感谢您成为开源社区的重要一员！  
 💬 捐赠后欢迎通过社交平台与我联系，您的名字将出现在项目致谢列表！
